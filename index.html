@@ -98,6 +98,56 @@ input,select,textarea{font-family:inherit;}
 .coach-only{background:var(--amber-dim);border:1px solid rgba(232,160,32,0.25);border-radius:10px;padding:12px 14px;margin-bottom:16px;font-size:0.78rem;color:var(--chalk-dim);}
 .coach-only strong{color:var(--amber);}
 
+/* planner */
+.plan-session-pick{margin-bottom:16px;}
+.lane-cfg{background:rgba(240,236,227,0.03);border:1px solid var(--border);border-radius:10px;padding:10px 12px;margin-bottom:8px;}
+.lane-cfg-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;}
+.lane-cfg-name{font-family:'JetBrains Mono',monospace;font-size:0.6rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--turf);}
+.lane-cfg-del{font-size:0.7rem;color:rgba(240,236,227,0.3);background:none;border:none;padding:2px 6px;border-radius:4px;}
+.lane-cfg-del:hover{background:var(--red-dim);color:var(--red);}
+.lane-cfg select{width:100%;background:rgba(240,236,227,0.05);border:1px solid var(--border-vis);border-radius:7px;padding:6px 8px;font-size:0.74rem;color:var(--chalk);outline:none;margin-bottom:6px;}
+.lane-cfg select:last-child{margin-bottom:0;}
+.lane-cfg select option{background:var(--pitch-card);}
+.add-lane-btn{width:100%;padding:9px;border-radius:9px;border:1.5px dashed var(--border-vis);background:none;color:rgba(240,236,227,0.4);font-family:'JetBrains Mono',monospace;font-size:0.62rem;letter-spacing:0.06em;text-transform:uppercase;transition:all .15s;margin-bottom:8px;}
+.add-lane-btn:hover{border-color:rgba(61,187,110,0.3);color:var(--turf);}
+.gt-row{display:flex;align-items:center;gap:10px;padding:10px 12px;background:rgba(240,236,227,0.03);border:1px solid var(--border);border-radius:10px;cursor:pointer;margin-bottom:12px;}
+.gt-row .lbl{font-size:0.74rem;font-weight:600;color:var(--chalk);margin-bottom:2px;}
+.gt-row .sub{font-size:0.62rem;color:var(--chalk-dim);line-height:1.4;}
+.gt-tog{width:38px;height:21px;border-radius:20px;background:rgba(240,236,227,0.14);position:relative;flex-shrink:0;transition:background .18s;}
+.gt-tog.on{background:var(--turf);}
+.gt-tog::after{content:'';position:absolute;width:15px;height:15px;background:#fff;border-radius:50%;top:3px;left:3px;transition:left .2s;}
+.gt-tog.on::after{left:20px;}
+.board-lane{background:var(--pitch-card);border:1px solid var(--border-vis);border-radius:12px;overflow:hidden;margin-bottom:10px;transition:all .15s;}
+.board-lane.drag-over{border-color:var(--turf);background:rgba(61,187,110,0.05);}
+.bl-head{padding:10px 13px;background:var(--pitch-mid);border-bottom:1px solid var(--border);}
+.bl-fac{font-family:'Barlow Condensed',sans-serif;font-size:0.9rem;font-weight:800;text-transform:uppercase;letter-spacing:0.03em;}
+.bl-foc{font-family:'JetBrains Mono',monospace;font-size:0.56rem;letter-spacing:0.06em;text-transform:uppercase;color:var(--turf);margin-top:2px;}
+.bl-drill{display:flex;align-items:center;gap:6px;margin-top:7px;padding:5px 8px;background:var(--amber-dim);border:1px solid rgba(232,160,32,0.25);border-radius:7px;cursor:pointer;}
+.bl-drill .n{font-size:0.66rem;font-weight:600;flex:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.bl-drill .d{font-family:'JetBrains Mono',monospace;font-size:0.54rem;color:var(--amber);}
+.bl-drill-add{margin-top:7px;width:100%;padding:5px;border-radius:7px;border:1px dashed var(--border-vis);background:none;color:rgba(240,236,227,0.35);font-family:'JetBrains Mono',monospace;font-size:0.56rem;letter-spacing:0.05em;text-transform:uppercase;}
+.bl-drill-add:hover{border-color:rgba(232,160,32,0.3);color:var(--amber);}
+.bl-slots{padding:9px 11px;min-height:44px;display:flex;flex-direction:column;gap:5px;}
+.bl-hint{font-family:'JetBrains Mono',monospace;font-size:0.56rem;letter-spacing:0.05em;color:rgba(240,236,227,0.2);text-align:center;padding:10px 0;text-transform:uppercase;}
+.ptok{display:flex;align-items:center;gap:8px;background:rgba(240,236,227,0.04);border:1px solid var(--border-vis);border-radius:8px;padding:6px 9px;}
+.ptok[draggable=true]{cursor:grab;}
+.ptok[draggable=true]:hover{background:rgba(240,236,227,0.07);border-color:rgba(61,187,110,0.25);}
+.ptok.dragging{opacity:0.4;}
+.ptok .av{width:26px;height:26px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Barlow Condensed',sans-serif;font-size:0.64rem;font-weight:800;color:#fff;flex-shrink:0;}
+.ptok .bd{flex:1;min-width:0;}
+.ptok .nm{font-size:0.74rem;font-weight:600;}
+.ptok .rl{font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:rgba(240,236,227,0.4);}
+.ptok .x{font-size:0.6rem;color:rgba(240,236,227,0.25);background:none;border:none;padding:3px 5px;border-radius:4px;}
+.ptok .x:hover{background:var(--red-dim);color:var(--red);}
+.pool2{background:var(--pitch-card);border:1px solid var(--border-vis);border-radius:12px;padding:12px;margin-bottom:12px;}
+.pool2-head{font-family:'Barlow Condensed',sans-serif;font-size:0.88rem;font-weight:800;text-transform:uppercase;letter-spacing:0.04em;margin-bottom:10px;}
+.pool2-head span{color:var(--turf);}
+.pool2-tokens{display:flex;flex-direction:column;gap:5px;min-height:30px;}
+.my-lane{background:var(--turf-dim);border:1px solid rgba(61,187,110,0.3);border-radius:10px;padding:11px 13px;margin-top:8px;}
+.my-lane .ml-label{font-family:'JetBrains Mono',monospace;font-size:0.56rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--turf);margin-bottom:3px;}
+.my-lane .ml-fac{font-family:'Barlow Condensed',sans-serif;font-size:1rem;font-weight:800;text-transform:uppercase;}
+.my-lane .ml-foc{font-size:0.72rem;color:var(--chalk-dim);margin-top:1px;}
+.my-lane .ml-drill{font-size:0.72rem;color:var(--amber);margin-top:5px;}
 .toast{position:fixed;bottom:22px;left:50%;transform:translateX(-50%) translateY(10px);background:var(--pitch-mid);border:1px solid rgba(61,187,110,0.35);border-radius:10px;padding:11px 18px;font-size:0.8rem;opacity:0;pointer-events:none;transition:all .3s;z-index:600;}
 .toast.show{opacity:1;transform:translateX(-50%) translateY(0);}
 .note{font-size:0.72rem;color:rgba(240,236,227,0.35);margin-top:20px;padding:12px 14px;line-height:1.5;background:rgba(240,236,227,0.02);border:1px solid var(--border);border-radius:9px;}
@@ -142,6 +192,8 @@ input,select,textarea{font-family:inherit;}
       <button class="tb-tab active" data-tab="sessions" onclick="showTab('sessions')">Sessions</button>
       <button class="tb-tab" data-tab="profile" onclick="showTab('profile')">My profile</button>
       <button class="tb-tab" data-tab="coach" id="coachTabBtn" style="display:none;" onclick="showTab('coach')">Coach</button>
+      <button class="tb-tab" data-tab="plan" id="planTabBtn" style="display:none;" onclick="showTab('plan')">Plan</button>
+      <button class="tb-tab" data-tab="drills" id="drillsTabBtn" style="display:none;" onclick="showTab('drills')">Drills</button>
     </div>
     <div class="tb-right">
       <span class="tb-user" id="userLabel"></span>
@@ -221,6 +273,79 @@ input,select,textarea{font-family:inherit;}
       <div id="coachAvail"></div>
     </div>
 
+    <!-- PLAN (coach) -->
+    <div class="panel" id="panel-plan">
+      <div class="page-head">
+        <div class="ph-eyebrow">Coach</div>
+        <div class="ph-title">Plan <em>the nets</em></div>
+        <div class="ph-desc">Pick a session, set your lanes, then auto-fill or drag the available players in. Save it and each player sees their lane.</div>
+      </div>
+      <div class="plan-session-pick">
+        <label class="field-label">Session to plan</label>
+        <select class="field-select" id="planSession" onchange="onPlanSessionChange()"></select>
+      </div>
+      <div class="card">
+        <div style="font-family:'Barlow Condensed',sans-serif;font-size:0.95rem;font-weight:800;text-transform:uppercase;letter-spacing:0.04em;margin-bottom:12px;">Facilities tonight</div>
+        <div id="planLaneCfg"></div>
+        <button class="add-lane-btn" onclick="planAddLane()">+ Add a lane / facility</button>
+        <div class="gt-row" onclick="planToggleGroup()">
+          <div style="flex:1;"><div class="lbl">Group bowlers by type</div><div class="sub">Auto-fill keeps pace and each spin type together</div></div>
+          <div class="gt-tog" id="planGtTog"></div>
+        </div>
+        <div style="display:flex;gap:8px;">
+          <button class="btn-primary" style="flex:1;" onclick="planAutoFill()">⚡ Auto-fill</button>
+          <button class="btn-ghost" onclick="planClear()">Clear</button>
+        </div>
+      </div>
+      <div id="planBoard"></div>
+      <div class="pool2">
+        <div class="pool2-head">Available — unassigned <span id="planPoolCount">0</span></div>
+        <div class="pool2-tokens" id="planPool" ondragover="planAllowDrop(event)" ondrop="planDropPool(event)"></div>
+      </div>
+      <button class="btn-primary" onclick="planSave()">Save plan → players see their lane</button>
+      <div class="note">Only players who marked themselves <strong>In</strong> (or Maybe) appear here. Saving stores the plan so each player sees their lane on the Sessions screen.</div>
+    </div>
+
+    <!-- DRILLS (coach) -->
+    <div class="panel" id="panel-drills">
+      <div class="page-head">
+        <div class="ph-eyebrow">Library</div>
+        <div class="ph-title">Drills <em>library</em></div>
+        <div class="ph-desc">Your bank of net drills. Assign them to lanes when planning. Shared across your club.</div>
+      </div>
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;">
+        <div class="field-label" id="drillCount" style="margin:0;">0 drills</div>
+        <button class="btn-ghost" onclick="openDrillEditor()">+ Add drill</button>
+      </div>
+      <div id="drillList"></div>
+      <div class="card" id="drillEditor" style="display:none;">
+        <div class="field"><label class="field-label">Drill name</label><input class="field-input" id="dName" placeholder="e.g. Front-foot drive repetition"></div>
+        <div class="field"><label class="field-label">Description</label><textarea class="field-input" id="dDesc" rows="3" style="resize:vertical;" placeholder="How to set it up, what to focus on…"></textarea></div>
+        <div class="field-row">
+          <div class="field"><label class="field-label">Duration (mins)</label><input class="field-input" id="dDur" type="number" min="1" placeholder="15"></div>
+          <div class="field"><label class="field-label">Skill focus</label>
+            <select class="field-select" id="dFocus"><option>Batting</option><option>Bowling</option><option>Fielding</option><option>Wicketkeeping</option><option>Fitness</option><option>Match scenario</option></select>
+          </div>
+        </div>
+        <div style="display:flex;gap:8px;">
+          <button class="btn-primary" style="flex:1;" onclick="saveDrill()">Save drill</button>
+          <button class="btn-ghost" onclick="closeDrillEditor()">Cancel</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- lane drill picker -->
+<div id="laneDrillModal" style="display:none;position:fixed;inset:0;background:rgba(6,14,9,0.8);z-index:500;align-items:center;justify-content:center;padding:20px;">
+  <div class="card" style="max-width:420px;width:100%;max-height:80vh;overflow-y:auto;">
+    <div style="font-family:'Barlow Condensed',sans-serif;font-size:1.2rem;font-weight:900;text-transform:uppercase;margin-bottom:12px;">Assign a <em style="font-style:normal;color:var(--turf);">drill</em></div>
+    <div id="laneDrillList" style="display:flex;flex-direction:column;gap:6px;"></div>
+    <div style="display:flex;gap:8px;margin-top:14px;">
+      <button class="btn-ghost" onclick="clearLaneDrill()">Remove drill</button>
+      <button class="btn-ghost" onclick="closeLaneDrill()">Close</button>
+    </div>
   </div>
 </div>
 
@@ -296,7 +421,12 @@ async function afterLogin(){
   if(!myProfile || !myProfile.first_name){ showTab('profile'); toast('Welcome! Fill in your profile to start.'); }
   else showTab('sessions');
   await loadSessions();
-  if(isCoach){ document.getElementById('coachTabBtn').style.display='inline-block'; }
+  if(isCoach){
+    document.getElementById('coachTabBtn').style.display='inline-block';
+    document.getElementById('planTabBtn').style.display='inline-block';
+    document.getElementById('drillsTabBtn').style.display='inline-block';
+    await loadDrills();
+  }
 }
 
 // ── PROFILE ──
@@ -349,12 +479,26 @@ async function loadSessions(){
     if(a.player_id===user.id) myAvail[a.session_id]=a.status;
     if(a.status==='available'){ counts[a.session_id]=(counts[a.session_id]||0)+1; }
   });
+  // load lane plans so each player can see their own lane
+  const { data:planLanesRows } = await sb.from('session_lanes').select('*');
+  const { data:allDrills } = await sb.from('drills').select('*');
+  const drillMap={}; (allDrills||[]).forEach(d=>drillMap[d.id]=d);
+  const myLaneBySession={};
+  (planLanesRows||[]).forEach(l=>{
+    if((l.assigned||[]).includes(user.id)){
+      myLaneBySession[l.session_id]={facility:l.facility,focus:l.focus,idx:l.lane_index,drill:l.drill_id?drillMap[l.drill_id]:null};
+    }
+  });
   list.innerHTML = sessions.map(s=>{
     const d = s.session_date?new Date(s.session_date+'T00:00'):null;
     const day = d?d.toLocaleDateString('en-GB',{weekday:'short'}):'—';
     const num = d?d.getDate():'';
     const mine = myAvail[s.id]||'';
     const cnt = counts[s.id]||0;
+    const myLane = myLaneBySession[s.id];
+    const laneBlock = myLane
+      ? '<div class="my-lane"><div class="ml-label">Your lane</div><div class="ml-fac">'+escapeHtml(myLane.facility)+' '+(myLane.idx+1)+'</div><div class="ml-foc">'+escapeHtml(myLane.focus)+'</div>'+(myLane.drill?'<div class="ml-drill">🎯 '+escapeHtml(myLane.drill.name)+(myLane.drill.duration?' · '+myLane.drill.duration+' min':'')+'</div>':'')+'</div>'
+      : '';
     return '<div class="sess-card"><div class="sess-date"><div class="sd-day">'+day+'</div><div class="sd-num">'+num+'</div></div>'
       + '<div class="sess-info"><div class="sess-name">'+escapeHtml(s.name)+'</div>'
       + '<div class="sess-meta">'+(s.session_time||'')+(s.split?' · '+escapeHtml(s.split):'')+' · '+cnt+' in</div>'
@@ -363,7 +507,7 @@ async function loadSessions(){
       + '<button class="rsvp-btn in'+(mine==='available'?' active':'')+'" onclick="setAvail(\''+s.id+'\',\'available\')">In</button>'
       + '<button class="rsvp-btn maybe'+(mine==='maybe'?' active':'')+'" onclick="setAvail(\''+s.id+'\',\'maybe\')">?</button>'
       + '<button class="rsvp-btn out'+(mine==='unavailable'?' active':'')+'" onclick="setAvail(\''+s.id+'\',\'unavailable\')">Out</button>'
-      + '</div></div>';
+      + '</div></div>' + laneBlock;
   }).join('');
 }
 async function setAvail(sessionId, status){
@@ -420,6 +564,204 @@ function showTab(tab){
   const btn=document.querySelector('.tb-tab[data-tab="'+tab+'"]'); if(btn) btn.classList.add('active');
   if(tab==='sessions') loadSessions();
   if(tab==='coach') loadCoachAvail();
+  if(tab==='plan') initPlan();
+  if(tab==='drills') renderDrills();
+}
+
+// ═══════════════ DRILLS (coach) ═══════════════
+let drills = [];
+let editingDrillId = null;
+const STARTER_DRILLS = [
+  ['Front-foot drive repetition','Feed throwdowns on a full length. High elbow, drive along the ground through the V.',15,'Batting'],
+  ['Back-foot punch & pull','Short-of-a-length feeds. Get back and across, punch off the back foot, pull the short ball.',15,'Batting'],
+  ['Spin play — use of feet','Spinners bowl to a batter using the crease and feet: down to drive, back to cut and sweep.',20,'Batting'],
+  ['Top-of-off channel','Seamers groove a line just outside off at a good length. Batter leaves and defends.',20,'Bowling'],
+  ['Yorker & variation','Target the blockhole with a marker, then mix in slower balls and wide yorkers.',15,'Bowling'],
+  ['Spin revolutions & landing','Rip the ball hard and land on a marker. Build consistency before variation.',15,'Bowling'],
+  ['Catching — slip cradle','Repeated edges off the cradle. Soft hands, watch it in.',10,'Fielding'],
+  ['Keeper takes — standing back','Take deliveries standing back to seam, moving with the line, clean low and wide.',15,'Wicketkeeping'],
+  ['Match scenario — last 5 overs','Set a target and field; batters chase under pressure.',25,'Match scenario']
+];
+async function loadDrills(){
+  const { data } = await sb.from('drills').select('*').order('created_at',{ascending:true});
+  drills = data || [];
+  // seed starters once if library empty
+  if(isCoach && drills.length===0){
+    const rows = STARTER_DRILLS.map(x=>({name:x[0],descr:x[1],duration:x[2],focus:x[3],created_by:user.id}));
+    const { data:seeded } = await sb.from('drills').insert(rows).select();
+    if(seeded) drills = seeded;
+  }
+}
+function renderDrills(){
+  const list=document.getElementById('drillList');
+  document.getElementById('drillCount').textContent = drills.length+(drills.length===1?' drill':' drills');
+  if(!drills.length){ list.innerHTML='<div class="empty"><div class="ei">🎯</div>No drills yet. Add your first above.</div>'; return; }
+  const fc={Batting:'var(--turf)',Bowling:'var(--blue)',Fielding:'var(--amber)',Wicketkeeping:'var(--red)',Fitness:'var(--chalk-dim)','Match scenario':'var(--amber)'};
+  list.innerHTML = drills.map(d=>
+    '<div class="card"><div style="display:flex;justify-content:space-between;align-items:start;gap:10px;margin-bottom:6px;">'
+    + '<div style="font-weight:600;font-size:0.92rem;">'+escapeHtml(d.name)+'</div>'
+    + '<span style="font-family:\'JetBrains Mono\',monospace;font-size:0.56rem;color:'+(fc[d.focus]||'var(--turf)')+';white-space:nowrap;">'+escapeHtml(d.focus||'')+(d.duration?' · '+d.duration+'m':'')+'</span></div>'
+    + (d.descr?'<div style="font-size:0.76rem;color:var(--chalk-dim);line-height:1.5;margin-bottom:10px;">'+escapeHtml(d.descr)+'</div>':'')
+    + '<div style="display:flex;gap:6px;"><button class="btn-ghost" style="font-size:0.66rem;padding:5px 11px;" onclick="editDrill(\''+d.id+'\')">Edit</button>'
+    + '<button class="btn-ghost" style="font-size:0.66rem;padding:5px 11px;" onclick="deleteDrill(\''+d.id+'\')">Remove</button></div></div>'
+  ).join('');
+}
+function openDrillEditor(){ editingDrillId=null; document.getElementById('dName').value=''; document.getElementById('dDesc').value=''; document.getElementById('dDur').value=''; document.getElementById('dFocus').value='Batting'; document.getElementById('drillEditor').style.display='block'; }
+function closeDrillEditor(){ document.getElementById('drillEditor').style.display='none'; }
+function editDrill(id){ const d=drills.find(x=>x.id===id); if(!d) return; editingDrillId=id; document.getElementById('dName').value=d.name; document.getElementById('dDesc').value=d.descr||''; document.getElementById('dDur').value=d.duration||''; document.getElementById('dFocus').value=d.focus||'Batting'; document.getElementById('drillEditor').style.display='block'; }
+async function saveDrill(){
+  const name=document.getElementById('dName').value.trim();
+  if(!name){ toast('Give the drill a name'); return; }
+  const row={name,descr:document.getElementById('dDesc').value.trim(),duration:document.getElementById('dDur').value?parseInt(document.getElementById('dDur').value):null,focus:document.getElementById('dFocus').value};
+  if(editingDrillId){ const {error}=await sb.from('drills').update(row).eq('id',editingDrillId); if(error){toast(error.message);return;} }
+  else { row.created_by=user.id; const {error}=await sb.from('drills').insert(row); if(error){toast(error.message);return;} }
+  await loadDrills(); renderDrills(); closeDrillEditor(); toast('Drill saved');
+}
+async function deleteDrill(id){ const {error}=await sb.from('drills').delete().eq('id',id); if(error){toast(error.message);return;} await loadDrills(); renderDrills(); toast('Drill removed'); }
+
+// ═══════════════ PLANNER (coach) ═══════════════
+const FACILITIES=['Outdoor net','Indoor net','Centre wicket','Bowling machine lane'];
+const FOCI=['Batting focus','Bowling focus','Match sim','Open / mixed','Skills drill'];
+let planSessions=[], planCurrentId=null, planLanes=[], planAssign={}, planGroupByType=false, planAvailPlayers=[];
+
+async function initPlan(){
+  const { data } = await sb.from('sessions').select('*').order('session_date',{ascending:true});
+  planSessions = data||[];
+  const sel=document.getElementById('planSession');
+  if(!planSessions.length){ sel.innerHTML='<option>No sessions yet — create one in Coach</option>'; document.getElementById('planBoard').innerHTML=''; document.getElementById('planPool').innerHTML=''; return; }
+  sel.innerHTML = planSessions.map(s=>{
+    const d=s.session_date?new Date(s.session_date+'T00:00').toLocaleDateString('en-GB',{weekday:'short',day:'numeric',month:'short'}):'';
+    return '<option value="'+s.id+'">'+escapeHtml(s.name)+(d?' · '+d:'')+'</option>';
+  }).join('');
+  planCurrentId = planCurrentId && planSessions.find(s=>s.id===planCurrentId) ? planCurrentId : planSessions[0].id;
+  sel.value = planCurrentId;
+  await loadPlanForSession();
+}
+async function onPlanSessionChange(){ planCurrentId=document.getElementById('planSession').value; await loadPlanForSession(); }
+
+async function loadPlanForSession(){
+  // who's available for this session
+  const { data:avail } = await sb.from('availability').select('*').eq('session_id',planCurrentId);
+  const { data:profiles } = await sb.from('profiles').select('*');
+  const pmap={}; (profiles||[]).forEach(p=>pmap[p.id]=p);
+  planAvailPlayers = (avail||[]).filter(a=>a.status==='available'||a.status==='maybe').map(a=>pmap[a.player_id]).filter(Boolean);
+  // existing saved plan?
+  const { data:lanes } = await sb.from('session_lanes').select('*').eq('session_id',planCurrentId).order('lane_index',{ascending:true});
+  if(lanes && lanes.length){
+    planLanes = lanes.map(l=>({facility:l.facility,focus:l.focus,drillId:l.drill_id}));
+    planAssign = {}; lanes.forEach((l,i)=>{ planAssign[i]=(l.assigned||[]).slice(); });
+  } else {
+    planLanes = [{facility:'Outdoor net',focus:'Batting focus'},{facility:'Outdoor net',focus:'Bowling focus'}];
+    planAssign = {};
+  }
+  renderPlanCfg(); renderPlanBoard(); renderPlanPool();
+}
+function renderPlanCfg(){
+  document.getElementById('planLaneCfg').innerHTML = planLanes.map((lane,i)=>
+    '<div class="lane-cfg"><div class="lane-cfg-head"><span class="lane-cfg-name">Lane '+(i+1)+'</span><button class="lane-cfg-del" onclick="planRemoveLane('+i+')">✕</button></div>'
+    + '<select onchange="planSetFacility('+i+',this.value)">'+FACILITIES.map(f=>'<option'+(lane.facility===f?' selected':'')+'>'+f+'</option>').join('')+'</select>'
+    + '<select onchange="planSetFocus('+i+',this.value)">'+FOCI.map(f=>'<option'+(lane.focus===f?' selected':'')+'>'+f+'</option>').join('')+'</select></div>'
+  ).join('');
+  document.getElementById('planGtTog').classList.toggle('on',planGroupByType);
+}
+function planAddLane(){ if(planLanes.length>=8){toast('Plenty of lanes!');return;} planLanes.push({facility:'Outdoor net',focus:'Open / mixed'}); renderPlanCfg(); renderPlanBoard(); }
+function planRemoveLane(i){ delete planAssign[i]; planLanes.splice(i,1); const na={}; Object.keys(planAssign).map(Number).sort((a,b)=>a-b).forEach(k=>{na[k>i?k-1:k]=planAssign[k];}); planAssign=na; renderPlanCfg(); renderPlanBoard(); renderPlanPool(); }
+function planSetFacility(i,v){ planLanes[i].facility=v; renderPlanBoard(); }
+function planSetFocus(i,v){ planLanes[i].focus=v; renderPlanBoard(); }
+function planToggleGroup(){ planGroupByType=!planGroupByType; renderPlanCfg(); toast(planGroupByType?'Bowlers will group by type':'Type grouping off'); }
+
+function pInit(p){ return ((p.first_name||'?')[0]||'')+((p.last_name||'')[0]||''); }
+function pColor(p){ const c=['#e8a020','#3b82f6','#10b981','#8b5cf6','#f59e0b','#ef4444','#14b8a6','#6366f1']; let h=0; (p.id||'').split('').forEach(ch=>h=ch.charCodeAt(0)+h); return c[h%c.length]; }
+function pName(p){ return (p.first_name||'?')+' '+(p.last_name||''); }
+function planAssignedIds(){ let ids=[]; Object.values(planAssign).forEach(a=>ids=ids.concat(a)); return ids; }
+
+function planTokenHTML(p,removeFn){
+  return '<div class="ptok" draggable="true" data-pid="'+p.id+'"><div class="av" style="background:'+pColor(p)+'">'+pInit(p)+'</div>'
+    + '<div class="bd"><div class="nm">'+escapeHtml(pName(p))+'</div><div class="rl">'+escapeHtml(p.role||'')+' · '+escapeHtml(p.grade||'')+'</div></div>'
+    + (removeFn?'<button class="x" onclick="'+removeFn+'">✕</button>':'')+'</div>';
+}
+function renderPlanBoard(){
+  document.getElementById('planBoard').innerHTML = planLanes.map((lane,i)=>{
+    const slots=(planAssign[i]||[]).map(pid=>{const p=planAvailPlayers.find(x=>x.id===pid); return p?planTokenHTML(p,'planRemove('+i+',\''+pid+'\')'):'';}).join('');
+    const drill=lane.drillId?drills.find(d=>d.id===lane.drillId):null;
+    const drillHTML = drill
+      ? '<div class="bl-drill" onclick="openLaneDrill('+i+')"><span>🎯</span><span class="n">'+escapeHtml(drill.name)+'</span>'+(drill.duration?'<span class="d">'+drill.duration+'m</span>':'')+'</div>'
+      : '<button class="bl-drill-add" onclick="openLaneDrill('+i+')">+ Add drill</button>';
+    return '<div class="board-lane" ondragover="planAllowDrop(event)" ondrop="planDrop(event,'+i+')">'
+      + '<div class="bl-head"><div class="bl-fac">'+escapeHtml(lane.facility)+' '+(i+1)+'</div><div class="bl-foc">'+escapeHtml(lane.focus)+'</div>'+drillHTML+'</div>'
+      + '<div class="bl-slots">'+(slots||'<div class="bl-hint">Drag players here</div>')+'</div></div>';
+  }).join('');
+  planWire();
+}
+function renderPlanPool(){
+  const assigned=planAssignedIds();
+  const avail=planAvailPlayers.filter(p=>!assigned.includes(p.id));
+  document.getElementById('planPoolCount').textContent=avail.length;
+  const pool=document.getElementById('planPool');
+  if(!planAvailPlayers.length){ pool.innerHTML='<div class="bl-hint">No one has marked themselves in for this session yet</div>'; return; }
+  pool.innerHTML = avail.length?avail.map(p=>planTokenHTML(p,null)).join(''):'<div class="bl-hint">Everyone assigned</div>';
+  planWire();
+}
+let planDragId=null;
+function planWire(){ document.querySelectorAll('#panel-plan .ptok[draggable=true]').forEach(t=>{ t.addEventListener('dragstart',e=>{planDragId=t.dataset.pid; setTimeout(()=>t.classList.add('dragging'),0);}); t.addEventListener('dragend',()=>t.classList.remove('dragging')); }); }
+function planAllowDrop(e){ e.preventDefault(); }
+function planRemoveEverywhere(pid){ Object.keys(planAssign).forEach(k=>{planAssign[k]=(planAssign[k]||[]).filter(x=>x!==pid);}); }
+function planDrop(e,i){ e.preventDefault(); if(!planDragId)return; planRemoveEverywhere(planDragId); if(!planAssign[i])planAssign[i]=[]; planAssign[i].push(planDragId); planDragId=null; renderPlanBoard(); renderPlanPool(); }
+function planDropPool(e){ e.preventDefault(); if(!planDragId)return; planRemoveEverywhere(planDragId); planDragId=null; renderPlanBoard(); renderPlanPool(); }
+function planRemove(i,pid){ planAssign[i]=(planAssign[i]||[]).filter(x=>x!==pid); renderPlanBoard(); renderPlanPool(); }
+function planClear(){ planAssign={}; renderPlanBoard(); renderPlanPool(); toast('Board cleared'); }
+
+function laneKind(f){ f=(f||'').toLowerCase(); if(f.includes('batting'))return'bat'; if(f.includes('bowling'))return'bowl'; return'open'; }
+function bowlCat(b){ b=(b||'').toLowerCase(); if(b.includes('off break'))return'off'; if(b.includes('leg break'))return'leg'; if(b.includes('orthodox'))return'lorth'; if(b.includes('wrist'))return'lwrist'; if(b.includes('left arm fast'))return'lpace'; if(b.includes('fast'))return'pace'; return'other'; }
+function planAutoFill(){
+  if(!planAvailPlayers.length){ toast('No available players for this session'); return; }
+  const batLanes=[],bowlLanes=[],openLanes=[];
+  planLanes.forEach((l,i)=>{const k=laneKind(l.focus); if(k==='bat')batLanes.push(i); else if(k==='bowl')bowlLanes.push(i); else openLanes.push(i);});
+  const batters=planAvailPlayers.filter(p=>p.role==='Batter'||p.role==='Wicketkeeper');
+  const bowlers=planAvailPlayers.filter(p=>p.role==='Bowler');
+  const allr=planAvailPlayers.filter(p=>p.role==='All-rounder');
+  const graded=(planSessions.find(s=>s.id===planCurrentId)||{}).split==='Graded by XI';
+  const go=['1st XI','2nd XI','Sunday XI','Junior'];
+  const byGrade=arr=>graded?[...arr].sort((a,b)=>go.indexOf(a.grade)-go.indexOf(b.grade)):arr;
+  const assign={}; planLanes.forEach((_,i)=>assign[i]=[]);
+  function dist(players,idxs){ if(!idxs.length)return players; let k=0; byGrade(players).forEach(p=>{assign[idxs[k%idxs.length]].push(p.id);k++;}); return []; }
+  let leftover=[];
+  leftover=leftover.concat(dist(batters,batLanes.length?batLanes:openLanes));
+  const bt=bowlLanes.length?bowlLanes:openLanes;
+  if(planGroupByType && bt.length>1 && bowlers.length){
+    const buckets={}; bowlers.forEach(p=>{const t=bowlCat(p.bowl_type);(buckets[t]=buckets[t]||[]).push(p);});
+    let li=0; Object.keys(buckets).forEach(t=>{const lane=bt[li%bt.length]; byGrade(buckets[t]).forEach(p=>assign[lane].push(p.id)); li++;});
+  } else { leftover=leftover.concat(dist(bowlers,bt)); }
+  const ft=openLanes.length?openLanes:planLanes.map((_,i)=>i);
+  byGrade(allr).forEach(p=>{let best=ft[0]; ft.forEach(idx=>{if(assign[idx].length<assign[best].length)best=idx;}); assign[best].push(p.id);});
+  byGrade(leftover).forEach(p=>{let best=0; planLanes.forEach((_,idx)=>{if(assign[idx].length<assign[best].length)best=idx;}); assign[best].push(p.id);});
+  planAssign=assign; renderPlanBoard(); renderPlanPool();
+  const placed=Object.values(assign).reduce((s,a)=>s+a.length,0);
+  toast('⚡ Auto-filled '+placed+' players');
+}
+
+// lane drill picker
+let laneDrillIdx=null;
+function openLaneDrill(i){
+  laneDrillIdx=i; const lane=planLanes[i];
+  const list=document.getElementById('laneDrillList');
+  list.innerHTML = drills.length?drills.map(d=>
+    '<div class="ptok" style="cursor:pointer;'+(lane.drillId===d.id?'border-color:rgba(61,187,110,0.4);background:var(--turf-dim);':'')+'" onclick="pickLaneDrill(\''+d.id+'\')"><div class="bd"><div class="nm">'+escapeHtml(d.name)+'</div><div class="rl">'+escapeHtml(d.focus||'')+(d.duration?' · '+d.duration+'m':'')+'</div></div>'+(lane.drillId===d.id?'<span style="color:var(--turf);">✓</span>':'')+'</div>'
+  ).join(''):'<div class="bl-hint">No drills yet — add some in the Drills tab.</div>';
+  document.getElementById('laneDrillModal').style.display='flex';
+}
+function pickLaneDrill(id){ if(laneDrillIdx===null)return; planLanes[laneDrillIdx].drillId=id; renderPlanBoard(); openLaneDrill(laneDrillIdx); }
+function clearLaneDrill(){ if(laneDrillIdx===null)return; delete planLanes[laneDrillIdx].drillId; renderPlanBoard(); closeLaneDrill(); }
+function closeLaneDrill(){ document.getElementById('laneDrillModal').style.display='none'; laneDrillIdx=null; }
+
+async function planSave(){
+  if(!planCurrentId){ toast('Pick a session first'); return; }
+  // wipe existing lanes for this session, then insert current
+  await sb.from('session_lanes').delete().eq('session_id',planCurrentId);
+  const rows=planLanes.map((lane,i)=>({session_id:planCurrentId,lane_index:i,facility:lane.facility,focus:lane.focus,drill_id:lane.drillId||null,assigned:(planAssign[i]||[])}));
+  const { error } = await sb.from('session_lanes').insert(rows);
+  if(error){ toast('Could not save: '+error.message); return; }
+  toast('Plan saved — players can see their lane');
 }
 
 function escapeHtml(s){ return (s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
